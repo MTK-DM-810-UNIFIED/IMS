@@ -1,7 +1,7 @@
 name: Build
 
 env:
-  APKTOOL_VER: 2.9.0
+  APKTOOL_VER: 2.9.2
 
 on:
   push:
