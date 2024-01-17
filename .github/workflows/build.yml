@@ -28,15 +28,10 @@ jobs:
       run: |
         java -jar apktool_${{ env.APKTOOL_VER }}.jar b ImsService
 
-    - name: Build mediatek-telephony-base
-      run: |
-        java -jar apktool_${{ env.APKTOOL_VER }}.jar b mediatek-telephony-base
-
     - name: Prepare Artifacts
       run: |
         mkdir -p out
         cp ImsService/dist/ImsService.apk out/
-        cp mediatek-telephony-base/dist/mediatek-telephony-base.jar out/
 
     - uses: actions/upload-artifact@v3
       with:
